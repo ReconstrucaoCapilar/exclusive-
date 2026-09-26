@@ -1,0 +1,89 @@
+
+/* FINAL — header single-layer + hero blended into the page. Legacy MK3 rules cannot touch these classes. */
+.exclusive-header-final{
+  position:relative;z-index:40;height:112px;padding:29px 52px;
+  display:grid;grid-template-columns:190px 1fr 310px 112px;gap:22px;align-items:start;
+  background:transparent;
+}
+.exclusive-logo-final{display:block;width:186px;line-height:0;position:relative;z-index:3}
+.exclusive-logo-final img{display:block;width:100%;height:auto;max-width:none;transform:none!important;filter:none!important;opacity:1!important}
+.exclusive-header-final .menu-toggle{display:none}
+
+@media(max-width:760px){
+  html,body{background:#05070a!important}
+  .site-shell{width:100%!important;margin:0!important;border:0!important;overflow:hidden!important}
+
+  /* One clean header layer. */
+  .exclusive-header-final{
+    position:absolute!important;left:0!important;right:0!important;top:0!important;
+    height:12.35vw!important;min-height:0!important;
+    padding:3.35vw 5.05vw 0!important;
+    display:flex!important;align-items:flex-start!important;justify-content:space-between!important;
+    background:linear-gradient(180deg,#05070a 0%,#05070a 82%,rgba(5,7,10,.94) 100%)!important;
+    z-index:50!important;
+  }
+  .exclusive-logo-final{display:block!important;width:29.2vw!important;height:auto!important;margin:0!important;padding:0!important;position:relative!important;left:auto!important;top:auto!important;transform:none!important}
+  .exclusive-logo-final img{display:block!important;width:100%!important;height:auto!important;max-width:none!important;margin:0!important;padding:0!important;transform:none!important;filter:none!important;animation:none!important}
+  .exclusive-header-final .nav,.exclusive-header-final .header-cta,.exclusive-header-final .manifesto{display:none!important}
+  .exclusive-header-final .menu-toggle{
+    display:block!important;width:7.0vw!important;height:6.2vw!important;margin:.55vw 0 0!important;padding:0!important;
+    background:transparent!important;border:0!important;position:relative!important;transform:none!important;
+  }
+  .exclusive-header-final .menu-toggle span{display:block!important;width:6.1vw!important;height:1px!important;background:#fff!important;margin:1.55vw 0!important;transform:none!important}
+
+  /* Reference proportions: hero runs continuously from header through the black signature area. */
+  .hero{
+    position:relative!important;height:143.8vw!important;min-height:0!important;max-height:none!important;
+    overflow:hidden!important;background:#05070a!important;isolation:isolate!important;
+  }
+  .hero-media{
+    position:absolute!important;left:0!important;right:0!important;top:12.35vw!important;bottom:0!important;
+    overflow:hidden!important;z-index:-4!important;background:#080b0e!important;
+  }
+  .hero-media img{
+    position:absolute!important;inset:0!important;width:100%!important;height:100%!important;max-width:none!important;
+    object-fit:cover!important;object-position:60% 49%!important;
+    transform:scale(1.004)!important;filter:brightness(.98) contrast(1.06) saturate(.82)!important;
+    -webkit-mask-image:none!important;mask-image:none!important;animation:none!important;
+  }
+  .hero-media::after{
+    content:""!important;position:absolute!important;inset:0!important;z-index:2!important;pointer-events:none!important;
+    background:
+      linear-gradient(90deg,rgba(4,6,8,.82) 0%,rgba(4,6,8,.68) 22%,rgba(4,6,8,.30) 39%,rgba(4,6,8,.03) 62%,rgba(4,6,8,.04) 100%),
+      linear-gradient(180deg,rgba(5,7,10,.10) 0%,transparent 62%,rgba(5,7,10,.16) 75%,rgba(5,7,10,.82) 91%,#05070a 100%)!important;
+  }
+  .hero::before{
+    content:""!important;position:absolute!important;inset:12.35vw 0 0!important;z-index:-2!important;pointer-events:none!important;
+    background:radial-gradient(circle at 28% 35%,rgba(255,255,255,.035),transparent 34%)!important;
+  }
+  .hero::after{
+    content:""!important;position:absolute!important;left:0!important;right:0!important;bottom:0!important;height:29vw!important;
+    z-index:-1!important;pointer-events:none!important;
+    background:linear-gradient(180deg,transparent 0%,rgba(5,7,10,.28) 28%,rgba(5,7,10,.88) 76%,#05070a 100%)!important;
+  }
+
+  /* Keep the current copy, but place it inside the continuous image like the approved reference. */
+  .hero-copy{left:5.15vw!important;top:24.4vw!important;width:52.5vw!important;z-index:8!important}
+  .hero-kicker-clean{font-size:1.45vw!important;letter-spacing:.31em!important;line-height:1.2!important;margin:0!important;color:rgba(255,255,255,.82)!important}
+  .hero-copy>.red-rule{width:7.0vw!important;height:.55vw!important;margin:3.05vw 0 4.1vw!important;background:#ef202c!important}
+  .exact-hero-title{margin:0!important;font-size:9.25vw!important;line-height:.87!important;letter-spacing:-.055em!important}
+  .exact-line{display:block!important;white-space:nowrap!important}
+  .exact-line-one{color:#fff!important}
+  .exact-line-two{color:#c7bbb5!important}
+  .exact-hero-subtitle{font-family:var(--serif)!important;font-size:5.35vw!important;line-height:1.06!important;margin-top:3.45vw!important;white-space:nowrap!important;color:#fff!important}
+  .hero-copy p{width:43vw!important;margin:5.15vw 0 6.2vw!important;font-size:2.45vw!important;line-height:1.58!important;color:rgba(255,255,255,.70)!important}
+  .hero-copy .btn.btn-red{width:47.2vw!important;height:10.35vw!important;min-height:0!important;padding:0 4.5vw!important;justify-content:space-between!important;font-size:1.72vw!important;letter-spacing:.22em!important;border-radius:0!important;background:linear-gradient(100deg,#c91521,#ef202c)!important;box-shadow:none!important}
+  .hero-copy .btn .arrow{font-size:3.25vw!important}
+
+  .hero-car{
+    display:block!important;position:absolute!important;left:5.15vw!important;right:auto!important;bottom:5.15vw!important;
+    width:auto!important;text-align:left!important;z-index:8!important;margin:0!important;padding:0!important;background:transparent!important;
+  }
+  .hero-car strong{display:block!important;font-size:1.72vw!important;letter-spacing:.30em!important;font-weight:600!important;color:#fff!important}
+  .hero-car strong::after{content:"";display:block;width:6.25vw;height:1px;background:rgba(255,255,255,.70);margin-top:3.2vw}
+  .hero-car span{display:block!important;margin-top:-1.2vw!important;margin-left:10.2vw!important;font-size:1.23vw!important;letter-spacing:.31em!important;color:rgba(255,255,255,.55)!important;white-space:nowrap!important}
+
+  /* No hard rectangle between hero and cards. */
+  .mosaic{position:relative!important;margin-top:0!important;border-top:0!important;background:#05070a!important}
+  .mosaic::before{content:""!important;position:absolute!important;left:0!important;right:0!important;top:-5vw!important;height:5.2vw!important;z-index:6!important;pointer-events:none!important;background:linear-gradient(180deg,transparent,#05070a)!important}
+}

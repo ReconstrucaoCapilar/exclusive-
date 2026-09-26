@@ -1,0 +1,199 @@
+
+/* V11 — seção Padrão Exclusive: mais clara, coerente com o hero e sem vermelho */
+:root{
+  --ex-champagne:#d8c5b6;
+  --ex-champagne-hi:#f0e4d9;
+  --ex-ivory:#f5f2ee;
+  --ex-silver:#aeb5bd;
+  --ex-ink:#05070a;
+}
+
+.standard-cinema{
+  background:linear-gradient(180deg,#06080b 0%,#090b0f 100%) !important;
+}
+.standard-cinema-visual{
+  min-height:720px !important;
+  background:
+    radial-gradient(circle at 72% 28%,rgba(216,197,182,.08),transparent 28%),
+    linear-gradient(180deg,#090b0f 0%,#05070a 100%) !important;
+  border-top:1px solid rgba(255,255,255,.05);
+  border-bottom:1px solid rgba(255,255,255,.055);
+  overflow:hidden;
+}
+.standard-cinema-video-wrap{
+  width:52% !important;
+  background:#07090c !important;
+  box-shadow:-32px 0 100px rgba(0,0,0,.36) !important;
+}
+.standard-cinema-video{
+  object-position:center 46% !important;
+  filter:saturate(1.04) contrast(1.03) brightness(1.08) !important;
+  transform:scale(1.005) !important;
+  will-change:transform,filter;
+}
+.standard-cinema-video-wrap::before{
+  background:
+    linear-gradient(90deg,
+      #05070a 0%,
+      rgba(5,7,10,.72) 10%,
+      rgba(5,7,10,.34) 26%,
+      rgba(5,7,10,.08) 48%,
+      transparent 78%),
+    linear-gradient(0deg,
+      rgba(4,6,9,.34) 0%,
+      transparent 30%,
+      transparent 78%,
+      rgba(4,6,9,.08) 100%) !important;
+}
+.standard-cinema-video-wrap::after{
+  border-left:1px solid rgba(216,197,182,.16) !important;
+  background:radial-gradient(circle at 64% 46%,transparent 46%,rgba(3,5,8,.08) 100%) !important;
+}
+.standard-cinema-shade{
+  background:
+    linear-gradient(90deg,
+      rgba(3,5,8,.97) 0%,
+      rgba(3,5,8,.88) 34%,
+      rgba(3,5,8,.58) 52%,
+      rgba(3,5,8,.12) 72%,
+      transparent 90%),
+    linear-gradient(0deg,
+      rgba(3,5,8,.84) 0%,
+      rgba(3,5,8,.12) 45%,
+      transparent 100%) !important;
+}
+.standard-cinema-top{color:rgba(255,255,255,.72)!important}
+.standard-cinema-index,
+.standard-cinema-caption{
+  color:rgba(255,255,255,.68)!important;
+}
+.standard-cinema-line{
+  background:linear-gradient(90deg,var(--ex-champagne),rgba(216,197,182,.12))!important;
+  box-shadow:0 0 18px rgba(216,197,182,.12);
+}
+.standard-cinema-kicker{
+  color:var(--ex-champagne)!important;
+  letter-spacing:.18em!important;
+}
+.standard-cinema-copy h2{
+  color:var(--ex-ivory)!important;
+  text-shadow:0 14px 40px rgba(0,0,0,.36)!important;
+}
+.standard-cinema-copy h2 span{
+  color:var(--ex-champagne)!important;
+  background:linear-gradient(105deg,#b79e8b 0%,#eadcd0 48%,#c8ad99 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  -webkit-text-fill-color:transparent;
+  text-shadow:none!important;
+}
+.standard-cinema-copy p{
+  color:rgba(245,242,238,.78)!important;
+}
+.standard-cinema-brands{
+  border-color:rgba(216,197,182,.16)!important;
+  background:rgba(5,7,10,.52)!important;
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035),0 12px 34px rgba(0,0,0,.2);
+}
+.standard-cinema-brands span{color:rgba(245,242,238,.75)!important}
+.standard-cinema-details{
+  background:linear-gradient(180deg,#090b0f 0%,#07090c 100%)!important;
+}
+.standard-cinema-item{
+  border-color:rgba(255,255,255,.07)!important;
+  transition:background .45s ease,border-color .45s ease,transform .45s cubic-bezier(.2,.8,.2,1)!important;
+}
+.standard-cinema-item:hover{
+  background:linear-gradient(90deg,rgba(216,197,182,.055),transparent 62%);
+  border-color:rgba(216,197,182,.16)!important;
+}
+.standard-cinema-no{
+  color:var(--ex-champagne)!important;
+}
+.standard-cinema-item h3{color:#f3f1ee!important}
+.standard-cinema-item p{color:rgba(235,237,240,.66)!important}
+
+/* brilho sutil no vídeo, sem aparência artificial */
+.standard-cinema-visual::after{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(115deg,transparent 32%,rgba(216,197,182,.035) 49%,transparent 66%);
+  transform:translateX(-45%);
+  opacity:0;
+}
+.standard-cinema-visual.ex-standard-in::after{
+  animation:exStandardSweep 1.65s .35s cubic-bezier(.2,.7,.2,1) both;
+}
+@keyframes exStandardSweep{
+  0%{transform:translateX(-45%);opacity:0}
+  22%{opacity:.7}
+  100%{transform:translateX(45%);opacity:0}
+}
+
+@media(max-width:720px){
+  .standard-cinema-visual{
+    min-height:705px !important;
+  }
+  .standard-cinema-video-wrap{
+    inset:0 0 auto 0 !important;
+    width:100% !important;
+    height:61% !important;
+    box-shadow:none !important;
+  }
+  .standard-cinema-video{
+    object-fit:cover !important;
+    object-position:center 38% !important;
+    filter:saturate(1.05) contrast(1.02) brightness(1.10) !important;
+    transform:scale(1.0) !important;
+  }
+  .standard-cinema-video-wrap::before{
+    background:
+      linear-gradient(0deg,
+        rgba(3,5,8,.96) 0%,
+        rgba(3,5,8,.54) 27%,
+        rgba(3,5,8,.13) 58%,
+        rgba(3,5,8,.03) 100%),
+      linear-gradient(90deg,rgba(3,5,8,.12),transparent 70%) !important;
+  }
+  .standard-cinema-video-wrap::after{
+    border-left:0!important;
+    border-bottom:1px solid rgba(216,197,182,.10)!important;
+    background:radial-gradient(circle at 50% 26%,transparent 38%,rgba(3,5,8,.08) 100%)!important;
+  }
+  .standard-cinema-shade{
+    background:
+      linear-gradient(0deg,
+        rgba(3,5,8,.99) 0%,
+        rgba(3,5,8,.96) 31%,
+        rgba(3,5,8,.78) 45%,
+        rgba(3,5,8,.24) 64%,
+        rgba(3,5,8,.02) 100%) !important;
+  }
+  .standard-cinema-copy{
+    bottom:88px!important;
+  }
+  .standard-cinema-copy h2{
+    font-size:clamp(44px,12vw,61px)!important;
+    line-height:.96!important;
+  }
+  .standard-cinema-copy p{
+    color:rgba(245,242,238,.76)!important;
+  }
+  .standard-cinema-brands{
+    bottom:22px!important;
+    border-color:rgba(216,197,182,.16)!important;
+    background:rgba(5,7,10,.62)!important;
+  }
+}
+
+@media(max-width:390px){
+  .standard-cinema-visual{min-height:690px!important}
+  .standard-cinema-video-wrap{height:60%!important}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .standard-cinema-visual::after{display:none!important}
+}

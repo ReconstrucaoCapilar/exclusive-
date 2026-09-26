@@ -1,0 +1,63 @@
+
+/* V17 — somente o CTA principal do hero */
+.ex-ref-cta{
+  position:relative !important;
+  overflow:hidden !important;
+  background:linear-gradient(135deg,#b9a58a 0%,#d6c7b2 50%,#a99479 100%) !important;
+  color:#0a0d10 !important;
+  border:1px solid rgba(255,255,255,.14) !important;
+  box-shadow:
+    0 14px 34px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.25) !important;
+  transition:
+    transform .28s ease,
+    filter .28s ease,
+    box-shadow .28s ease !important;
+}
+
+.ex-ref-cta::before{
+  content:"" !important;
+  position:absolute !important;
+  inset:-1px auto -1px -36% !important;
+  width:28% !important;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent) !important;
+  transform:skewX(-18deg) !important;
+  transition:transform .8s ease !important;
+  pointer-events:none !important;
+}
+
+.ex-ref-cta:hover,
+.ex-ref-cta:focus-visible{
+  transform:translateY(-2px) !important;
+  filter:brightness(1.04) !important;
+  box-shadow:
+    0 18px 40px rgba(0,0,0,.34),
+    inset 0 1px 0 rgba(255,255,255,.32) !important;
+}
+
+.ex-ref-cta:hover::before,
+.ex-ref-cta:focus-visible::before{
+  transform:translateX(520%) skewX(-18deg) !important;
+}
+
+.ex-ref-cta:active{
+  transform:translateY(0) !important;
+}
+
+.ex-ref-cta .ex-ref-arrow{
+  color:#0a0d10 !important;
+  transition:transform .28s ease !important;
+}
+
+.ex-ref-cta:hover .ex-ref-arrow,
+.ex-ref-cta:focus-visible .ex-ref-arrow{
+  transform:translateX(4px) !important;
+}
+
+/* Mobile: mantém exatamente a proporção atual, só troca acabamento */
+@media(max-width:720px){
+  .ex-ref-cta{
+    background:linear-gradient(135deg,#b9a58a 0%,#d6c7b2 50%,#a99479 100%) !important;
+    color:#0a0d10 !important;
+  }
+}

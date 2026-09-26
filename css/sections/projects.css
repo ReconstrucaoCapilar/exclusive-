@@ -1,0 +1,135 @@
+
+/* =============================
+   EXCLUSIVE — PROJETOS PREMIUM V12
+   Escopo isolado: apenas #projetos
+   ============================= */
+#projetos.projects{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(70% 60% at 8% 10%, rgba(203,185,170,.07), transparent 62%),
+    radial-gradient(55% 45% at 94% 75%, rgba(255,255,255,.025), transparent 70%),
+    linear-gradient(180deg,#080a0e 0%,#07090d 52%,#05070a 100%) !important;
+  border-top:1px solid rgba(255,255,255,.055);
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+#projetos.projects::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  background:linear-gradient(115deg,transparent 18%,rgba(255,255,255,.024) 40%,transparent 61%);
+  transform:translateX(-42%);
+  opacity:.75;
+}
+#projetos .label{
+  color:rgba(239,239,236,.78) !important;
+  text-shadow:none !important;
+}
+#projetos .editorial-title{
+  color:#f3f1ed !important;
+  text-shadow:0 8px 30px rgba(0,0,0,.28);
+}
+#projetos .projects-accent{
+  color:#cdbbad !important;
+  background:linear-gradient(104deg,#a99788 0%,#e6d8cc 38%,#b7a596 66%,#efe5dc 100%) !important;
+  background-size:220% 100% !important;
+  -webkit-background-clip:text !important;
+  background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  animation:projectsMetalSheen 7s ease-in-out infinite alternate !important;
+  filter:drop-shadow(0 5px 18px rgba(203,185,170,.06));
+}
+@keyframes projectsMetalSheen{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+#projetos .projects-action{color:rgba(233,233,229,.58) !important}
+#projetos .round{
+  color:#e8e2dc !important;
+  border-color:rgba(203,185,170,.48) !important;
+  background:rgba(255,255,255,.012) !important;
+  box-shadow:inset 0 0 0 1px rgba(255,255,255,.018);
+}
+#projetos .round:hover,#projetos .round:focus-visible{
+  border-color:#d9c8ba !important;
+  background:rgba(203,185,170,.055) !important;
+  box-shadow:0 0 28px rgba(203,185,170,.08);
+}
+#projetos .projects-grid{position:relative;z-index:1}
+#projetos .project{
+  isolation:isolate;
+  border:1px solid rgba(218,207,197,.14) !important;
+  background:#0b0e12 !important;
+  box-shadow:0 18px 40px rgba(0,0,0,.18);
+  transition:border-color .45s ease,box-shadow .45s ease,transform .45s cubic-bezier(.22,.61,.36,1) !important;
+}
+#projetos .project::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,transparent 0%,transparent 50%,rgba(9,11,15,.22) 56%,rgba(9,11,15,.84) 100%),
+    linear-gradient(0deg,rgba(4,6,9,.72),transparent 48%);
+}
+#projetos .project::after{
+  content:"" !important;
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:linear-gradient(110deg,transparent 32%,rgba(255,255,255,.06) 48%,transparent 64%) !important;
+  transform:translateX(-145%);
+  transition:transform .9s cubic-bezier(.2,.7,.2,1) !important;
+  opacity:.44;
+}
+#projetos .project:hover,#projetos .project:focus-visible{
+  border-color:rgba(217,200,186,.52) !important;
+  box-shadow:0 24px 54px rgba(0,0,0,.34),0 0 0 1px rgba(203,185,170,.04) inset;
+  transform:translateY(-3px);
+}
+#projetos .project:hover::after,#projetos .project:focus-visible::after{transform:translateX(145%)}
+#projetos .project img{
+  filter:saturate(.92) contrast(1.04) brightness(.96);
+  transition:transform 1s cubic-bezier(.2,.7,.2,1),filter .5s ease !important;
+}
+#projetos .project:hover img,#projetos .project:focus-visible img{transform:scale(1.035) !important;filter:saturate(1) contrast(1.05) brightness(1.02)}
+#projetos .project-info{z-index:3 !important}
+#projetos .project-info::before{
+  content:"";
+  display:block;
+  width:29px;
+  height:2px;
+  margin-bottom:14px;
+  background:linear-gradient(90deg,#a99788,#e6d8cc);
+  box-shadow:0 0 14px rgba(203,185,170,.10);
+}
+#projetos .project h3{color:#f1efeb !important;text-shadow:0 4px 18px rgba(0,0,0,.3)}
+#projetos .project p{color:rgba(230,229,225,.60) !important}
+#projetos .project-open{color:rgba(246,244,239,.92) !important}
+#projetos .project-open::before{
+  border-color:rgba(203,185,170,.58) !important;
+  color:#d9c8ba !important;
+  background:rgba(203,185,170,.035) !important;
+  transition:transform .35s ease,background .35s ease,border-color .35s ease;
+}
+#projetos .project:hover .project-open::before,#projetos .project:focus-visible .project-open::before{
+  transform:rotate(90deg);
+  background:rgba(203,185,170,.10) !important;
+  border-color:#d9c8ba !important;
+}
+#projetos .project .arrow{color:#ded5cd !important}
+
+@media(max-width:720px){
+  #projetos.projects{padding-top:48px !important;padding-bottom:54px !important}
+  #projetos .projects-grid{gap:12px !important}
+  #projetos .project{box-shadow:0 12px 30px rgba(0,0,0,.16)}
+  #projetos .project::before{
+    background:linear-gradient(90deg,transparent 0%,transparent 53%,rgba(9,11,15,.35) 59%,rgba(9,11,15,.94) 100%),linear-gradient(0deg,rgba(4,6,9,.52),transparent 58%);
+  }
+  #projetos .project-info::before{width:24px;margin-bottom:10px}
+  #projetos .editorial-title{line-height:1.02 !important}
+}
+@media(prefers-reduced-motion:reduce){
+  #projetos .projects-accent{animation:none !important}
+  #projetos .project,#projetos .project img,#projetos .project::after,#projetos .project-open::before{transition:none !important}
+}

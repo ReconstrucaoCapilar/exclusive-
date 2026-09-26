@@ -1,0 +1,375 @@
+
+/* Hero reconstruído em classes isoladas para não herdar conflitos do MK3. */
+.ex-ref-hero,
+.ex-ref-hero *{
+  box-sizing:border-box;
+}
+.ex-ref-hero{
+  position:relative;
+  width:100%;
+  height:clamp(760px,91vw,980px);
+  overflow:hidden;
+  isolation:isolate;
+  background:#05070a;
+  color:#fff;
+  border:0;
+}
+.ex-ref-hero-bg{
+  position:absolute;
+  inset:0;
+  z-index:0;
+  overflow:hidden;
+  background:#05070a;
+}
+.ex-ref-hero-bg img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center center;
+  filter:brightness(.84) contrast(1.06) saturate(.72);
+  transform:none;
+}
+.ex-ref-hero::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:1;
+  pointer-events:none;
+  background:
+    linear-gradient(90deg,rgba(4,6,9,.95) 0%,rgba(4,6,9,.84) 25%,rgba(4,6,9,.50) 45%,rgba(4,6,9,.08) 68%,rgba(4,6,9,0) 100%),
+    linear-gradient(180deg,rgba(3,5,8,.06) 0%,rgba(3,5,8,0) 67%,rgba(3,5,8,.44) 83%,rgba(3,5,8,.92) 100%);
+}
+.ex-ref-header{
+  position:absolute;
+  inset:0 0 auto 0;
+  height:108px;
+  z-index:10;
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  padding:22px 40px 0 40px;
+  background:linear-gradient(180deg,#06090d 0%,#06090d 74%,rgba(6,9,13,.96) 100%);
+}
+.ex-ref-logo{
+  display:block;
+  width:292px;
+  height:78px;
+  margin:0;
+  padding:0;
+  overflow:hidden;
+  transform:none!important;
+  filter:none!important;
+}
+.ex-ref-logo img{
+  display:block;
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  object-position:left top;
+  margin:0;
+  padding:0;
+  transform:none!important;
+  filter:none!important;
+  animation:none!important;
+}
+.ex-ref-menu{
+  flex:0 0 auto;
+  display:block!important;
+  position:relative!important;
+  width:50px!important;
+  height:50px!important;
+  margin:0!important;
+  padding:4px 0!important;
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  transform:none!important;
+}
+.ex-ref-menu span{
+  display:block!important;
+  width:46px!important;
+  height:1.5px!important;
+  margin:8px 0!important;
+  background:#fff!important;
+  opacity:.96!important;
+  transform:none!important;
+}
+.ex-ref-copy{
+  position:absolute;
+  z-index:5;
+  left:5.2%;
+  top:20.8%;
+  width:47%;
+  max-width:520px;
+}
+.ex-ref-kicker{
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:12px;
+  line-height:1;
+  font-weight:600;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.88);
+  white-space:nowrap;
+}
+.ex-ref-rule{
+  display:block;
+  width:60px;
+  height:4px;
+  margin-top:22px;
+  background:#e51e2b;
+}
+.ex-ref-copy h1{
+  margin:26px 0 0;
+  padding:0;
+  font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size:clamp(72px,8vw,108px);
+  line-height:.78;
+  font-weight:600;
+  letter-spacing:-.045em;
+  color:#f4f2ef;
+}
+.ex-ref-copy h1 span{
+  display:block;
+  white-space:nowrap;
+}
+.ex-ref-copy h1 .accent{
+  margin-top:8px;
+  color:#cbbdb6;
+}
+.ex-ref-subtitle{
+  margin-top:28px;
+  font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif;
+  font-size:clamp(38px,4.3vw,58px);
+  line-height:1;
+  font-weight:600;
+  letter-spacing:-.03em;
+  color:#f3f0ec;
+  white-space:nowrap;
+}
+.ex-ref-copy p{
+  margin:36px 0 0;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:clamp(18px,1.55vw,23px);
+  line-height:1.46;
+  font-weight:400;
+  color:rgba(255,255,255,.72);
+}
+.ex-ref-cta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  width:min(430px,100%);
+  height:90px;
+  margin-top:50px;
+  padding:0 34px;
+  background:linear-gradient(108deg,#c41420 0%,#da1f29 60%,#ed2932 100%);
+  border:1px solid rgba(255,95,103,.35);
+  color:#fff;
+  text-decoration:none;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  line-height:1;
+  font-weight:700;
+  letter-spacing:.24em;
+  text-transform:uppercase;
+  box-shadow:0 15px 36px rgba(75,0,7,.28),inset 0 1px rgba(255,255,255,.11);
+}
+.ex-ref-arrow{
+  font-size:28px;
+  font-weight:300;
+  letter-spacing:0;
+}
+.ex-ref-signature{
+  position:absolute;
+  z-index:5;
+  left:5.2%;
+  bottom:34px;
+  width:62%;
+  color:#fff;
+}
+.ex-ref-signature strong{
+  display:block;
+  margin:0 0 21px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:15px;
+  line-height:1;
+  font-weight:600;
+  letter-spacing:.32em;
+  text-transform:uppercase;
+  white-space:nowrap;
+}
+.ex-ref-signature div{
+  display:flex;
+  align-items:center;
+  gap:30px;
+  font-family:Arial,Helvetica,sans-serif;
+  font-size:9px;
+  line-height:1;
+  font-weight:400;
+  letter-spacing:.33em;
+  text-transform:uppercase;
+  color:rgba(255,255,255,.58);
+  white-space:nowrap;
+}
+.ex-ref-signature i{
+  display:block;
+  width:54px;
+  height:1px;
+  background:rgba(255,255,255,.72);
+}
+
+/* Os cards entram imediatamente no fim do hero, como na referência. */
+.ex-ref-hero + .mosaic{
+  margin-top:0!important;
+}
+.ex-ref-hero + .mosaic::before{
+  display:none!important;
+}
+
+@media(max-width:720px){
+  .ex-ref-hero{
+    height:144vw;
+    min-height:610px;
+    max-height:760px;
+  }
+  .ex-ref-hero-bg img{
+    object-position:center center;
+    filter:brightness(.88) contrast(1.05) saturate(.72);
+  }
+  .ex-ref-hero::before{
+    background:
+      linear-gradient(90deg,rgba(3,5,8,.96) 0%,rgba(3,5,8,.87) 25%,rgba(3,5,8,.56) 43%,rgba(3,5,8,.08) 68%,rgba(3,5,8,0) 100%),
+      linear-gradient(180deg,rgba(3,5,8,.03) 0%,rgba(3,5,8,0) 70%,rgba(3,5,8,.48) 84%,rgba(3,5,8,.96) 100%);
+  }
+  .ex-ref-header{
+    height:12.4vw;
+    min-height:76px;
+    max-height:92px;
+    padding:2.8vw 5.1vw 0;
+  }
+  .ex-ref-logo{
+    width:35vw;
+    max-width:228px;
+    height:9.4vw;
+    max-height:61px;
+  }
+  .ex-ref-menu{
+    width:7vw!important;
+    height:7vw!important;
+    min-width:42px!important;
+    min-height:42px!important;
+  }
+  .ex-ref-menu span{
+    width:6.1vw!important;
+    max-width:44px!important;
+    min-width:34px!important;
+    margin:1.15vw 0!important;
+  }
+  .ex-ref-copy{
+    left:5.2%;
+    top:17.2%;
+    width:50.5%;
+    max-width:none;
+  }
+  .ex-ref-kicker{
+    font-size:1.45vw;
+    letter-spacing:.31em;
+  }
+  .ex-ref-rule{
+    width:7vw;
+    height:.5vw;
+    min-height:3px;
+    margin-top:2.6vw;
+  }
+  .ex-ref-copy h1{
+    margin-top:4.2vw;
+    font-size:10.1vw;
+    line-height:.79;
+    letter-spacing:-.046em;
+  }
+  .ex-ref-copy h1 .accent{
+    margin-top:1vw;
+  }
+  .ex-ref-subtitle{
+    margin-top:3.8vw;
+    font-size:5.4vw;
+    line-height:1;
+    white-space:nowrap;
+  }
+  .ex-ref-copy p{
+    margin-top:5.4vw;
+    font-size:2.25vw;
+    line-height:1.48;
+  }
+  .ex-ref-cta{
+    width:47vw;
+    height:10.5vw;
+    min-height:62px;
+    max-height:78px;
+    margin-top:6.1vw;
+    padding:0 4vw;
+    font-size:1.63vw;
+    letter-spacing:.22em;
+  }
+  .ex-ref-arrow{
+    font-size:3.1vw;
+  }
+  .ex-ref-signature{
+    left:5.2%;
+    bottom:3.9vw;
+    width:66%;
+  }
+  .ex-ref-signature strong{
+    margin-bottom:2.4vw;
+    font-size:1.63vw;
+    letter-spacing:.31em;
+  }
+  .ex-ref-signature div{
+    gap:3.2vw;
+    font-size:1.05vw;
+    letter-spacing:.31em;
+  }
+  .ex-ref-signature i{
+    width:6vw;
+  }
+}
+
+@media(max-width:430px){
+  .ex-ref-hero{
+    height:144vw;
+    min-height:610px;
+    max-height:650px;
+  }
+  .ex-ref-header{
+    min-height:72px;
+  }
+  .ex-ref-logo{
+    width:42vw;
+    height:11vw;
+  }
+  .ex-ref-copy{
+    top:18%;
+    width:54%;
+  }
+  .ex-ref-kicker{font-size:2vw}
+  .ex-ref-rule{width:9vw;height:3px;margin-top:3.2vw}
+  .ex-ref-copy h1{font-size:11.7vw;margin-top:4.8vw}
+  .ex-ref-subtitle{font-size:6.45vw;margin-top:4.4vw}
+  .ex-ref-copy p{font-size:2.75vw;margin-top:6vw;line-height:1.5}
+  .ex-ref-cta{
+    width:54vw;
+    height:13.5vw;
+    min-height:58px;
+    margin-top:6.5vw;
+    padding:0 4.5vw;
+    font-size:2vw;
+  }
+  .ex-ref-arrow{font-size:4vw}
+  .ex-ref-signature{bottom:4.6vw;width:82%}
+  .ex-ref-signature strong{font-size:2vw;margin-bottom:3vw}
+  .ex-ref-signature div{font-size:1.25vw;gap:3.8vw}
+}

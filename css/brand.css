@@ -1,0 +1,15 @@
+
+    /* Mesma direção visual da base MK3; apenas adaptações de marca e enquadramento. */
+    .exclusive-brand-main{font-size:31px!important;letter-spacing:-.055em!important;line-height:.86!important;font-style:italic}
+    .exclusive-intro-logo{font-size:clamp(54px,10vw,126px)!important;letter-spacing:-.07em!important;font-style:italic}
+    .exclusive-evaluation-brand{font-size:clamp(28px,4.3vw,52px)!important;letter-spacing:-.055em!important;font-style:italic}
+    .exclusive-evaluation-brand small{letter-spacing:.34em!important;margin-top:9px!important}
+    .hero .hero-media img{object-position:62% 48%!important;filter:brightness(1.12) saturate(1.04) contrast(1.02)!important}
+    .standard-cinema-video{filter:saturate(1.01) contrast(1.04) brightness(.97)!important}
+    @media(max-width:720px){
+      .hero .exclusive-brand-main{font-size:24px!important;letter-spacing:-.045em!important}
+      .hero .hero-media img{left:50%!important;top:54px!important;width:100%!important;height:376px!important;object-fit:cover!important;object-position:62% 50%!important;transform:translateX(-50%)!important;filter:brightness(1.10) saturate(1.03)!important;-webkit-mask-image:none!important;mask-image:none!important}
+      .hero::before{background:linear-gradient(90deg,rgba(3,5,8,.82) 0%,rgba(3,5,8,.42) 37%,rgba(3,5,8,.03) 70%),linear-gradient(0deg,rgba(3,5,8,.70),transparent 35%,rgba(3,5,8,.12))!important}
+      .exclusive-intro-logo{font-size:clamp(48px,13vw,78px)!important}
+    }
+  

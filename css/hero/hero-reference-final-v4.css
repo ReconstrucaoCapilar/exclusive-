@@ -1,0 +1,119 @@
+
+@media (max-width:760px){
+  /* remove the duplicated mobile mosaic from older iterations */
+  .mosaic.mobile-only{display:none!important}
+
+  /* clean, stable logo — no compressed/overlapping glyphs on Android */
+  .header .brand{left:5.05vw!important;top:2.75vw!important;transform:none!important;overflow:visible!important}
+  .header .brand-main,.header .exclusive-brand-main{
+    display:block!important;
+    font-family:Arial,Helvetica,sans-serif!important;
+    font-size:5.18vw!important;
+    line-height:.90!important;
+    font-weight:700!important;
+    font-style:italic!important;
+    letter-spacing:-.025em!important;
+    white-space:nowrap!important;
+    transform:skewX(-6deg) scaleX(1.18)!important;
+    transform-origin:left top!important;
+    color:#fff!important;
+    text-shadow:none!important;
+  }
+  .header .brand-sub{
+    margin-top:1.45vw!important;
+    padding-left:.35vw!important;
+    font-family:Arial,Helvetica,sans-serif!important;
+    font-size:1.22vw!important;
+    line-height:1!important;
+    font-weight:400!important;
+    letter-spacing:.52em!important;
+    color:rgba(255,255,255,.74)!important;
+  }
+
+  /* use the approved portrait at native proportions; reference uses the same framing */
+  .hero-media{top:12.35vw!important;bottom:0!important;overflow:hidden!important;background:#05080b!important}
+  .hero-media img{
+    left:0!important;right:auto!important;
+    top:-12.45vw!important;bottom:auto!important;
+    width:100%!important;height:auto!important;min-height:0!important;
+    object-fit:initial!important;object-position:initial!important;
+    transform:none!important;
+    filter:brightness(.94) contrast(1.055) saturate(.78)!important;
+    animation:refNativeDrift 11s cubic-bezier(.2,.7,.2,1) both!important;
+  }
+  .hero-media::before{
+    background:linear-gradient(90deg,
+      rgba(2,5,8,.965) 0%,
+      rgba(2,5,8,.90) 23%,
+      rgba(2,5,8,.72) 35%,
+      rgba(2,5,8,.43) 46%,
+      rgba(2,5,8,.13) 61%,
+      rgba(2,5,8,.015) 78%,
+      rgba(2,5,8,0) 100%)!important;
+  }
+  .hero-media::after{
+    background:linear-gradient(180deg,
+      rgba(2,4,7,.02) 0%,
+      rgba(2,4,7,0) 61%,
+      rgba(2,4,7,.06) 75%,
+      rgba(2,4,7,.22) 89%,
+      rgba(2,4,7,.48) 100%)!important;
+  }
+
+  /* exact vertical rhythm from the supplied reference */
+  .hero-copy{left:5.15vw!important;top:24.65vw!important;width:50.5vw!important}
+  .hero-kicker-clean{font-size:1.48vw!important;letter-spacing:.37em!important;color:rgba(255,255,255,.82)!important}
+  .hero-copy>.red-rule{width:6.55vw!important;height:.42vw!important;margin:2.45vw 0 0!important}
+  .exact-hero-title{
+    width:54vw!important;
+    margin:3.85vw 0 0!important;
+    font-size:10.95vw!important;
+    line-height:.82!important;
+    font-weight:500!important;
+    letter-spacing:-.052em!important;
+  }
+  .exact-line-two{margin-top:.22vw!important;color:#c8bab5!important}
+  .exact-hero-subtitle{
+    margin-top:2.65vw!important;
+    width:60vw!important;
+    font-size:5.12vw!important;
+    line-height:1!important;
+    white-space:nowrap!important;
+  }
+  .hero-copy p{
+    width:35.0vw!important;
+    margin-top:5.25vw!important;
+    font-size:2.28vw!important;
+    line-height:1.52!important;
+    color:rgba(244,242,239,.70)!important;
+  }
+  .hero-copy .btn.btn-red{
+    width:46.05vw!important;
+    height:10.35vw!important;
+    margin-top:6.25vw!important;
+    padding:0 4.0vw!important;
+    font-size:1.60vw!important;
+    letter-spacing:.23em!important;
+  }
+
+  /* preserve the wet-floor image under the CTA, as in the reference */
+  .hero-car{left:5.35vw!important;bottom:4.55vw!important;width:84vw!important}
+  .hero-car strong{font-size:1.58vw!important;letter-spacing:.30em!important}
+  .hero-car span{margin-top:3.0vw!important;padding-left:9.55vw!important;font-size:1.08vw!important;letter-spacing:.30em!important}
+
+  /* hand-off cards: one row only, brighter and matching reference crop */
+  .mosaic.desktop-only{display:grid!important;height:34.05vw!important;grid-template-rows:34.05vw!important}
+  .mosaic.desktop-only .tile{height:34.05vw!important}
+  .mosaic.desktop-only .tile img{filter:brightness(.88) contrast(1.045) saturate(.88)!important}
+  .mosaic.desktop-only .tile-wheel img{object-position:48% 49%!important;transform:scale(1.16)!important}
+  .mosaic.desktop-only .tile-interior img{object-position:50% 51%!important;transform:scale(1.025)!important}
+  .mosaic.desktop-only .tile::after{background:linear-gradient(180deg,rgba(0,0,0,0) 48%,rgba(0,0,0,.58) 100%)!important}
+  .mosaic.desktop-only .ref-card-copy{bottom:2.7vw!important}
+  .mosaic.desktop-only .ref-card-copy .label{font-size:1.62vw!important;letter-spacing:.27em!important}
+  .mosaic.desktop-only .ref-card-arrow{font-size:2.75vw!important}
+}
+@keyframes refNativeDrift{
+  from{transform:translate3d(0,0,0) scale(1.003)}
+  to{transform:translate3d(0,-.55vw,0) scale(1.003)}
+}
+@media (prefers-reduced-motion:reduce){.hero-media img{animation:none!important}}

@@ -1,0 +1,107 @@
+
+/* Logo do header reconstruído em uma única camada. Hero/imagem não alterados. */
+.ex-ref-header .ex-logo-clean{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  width:max-content!important;
+  height:auto!important;
+  margin:0!important;
+  padding:0!important;
+  overflow:visible!important;
+  position:relative!important;
+  transform:none!important;
+  filter:none!important;
+  opacity:1!important;
+  isolation:isolate!important;
+  text-decoration:none!important;
+  white-space:nowrap!important;
+}
+.ex-ref-header .ex-logo-clean::before,
+.ex-ref-header .ex-logo-clean::after,
+.ex-ref-header .ex-logo-word::before,
+.ex-ref-header .ex-logo-word::after,
+.ex-ref-header .ex-logo-subline::before,
+.ex-ref-header .ex-logo-subline::after,
+.ex-ref-header .ex-logo-accent::before,
+.ex-ref-header .ex-logo-accent::after{
+  content:none!important;
+  display:none!important;
+}
+.ex-ref-header .ex-logo-word{
+  display:block!important;
+  position:relative!important;
+  margin:0!important;
+  padding:0!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:34px!important;
+  line-height:.88!important;
+  font-weight:900!important;
+  font-style:italic!important;
+  letter-spacing:-.055em!important;
+  color:#f6f6f4!important;
+  -webkit-text-fill-color:#f6f6f4!important;
+  -webkit-text-stroke:0!important;
+  text-shadow:0 1px 0 rgba(255,255,255,.05),0 6px 18px rgba(0,0,0,.20)!important;
+  transform:none!important;
+  filter:none!important;
+  animation:exLogoEnter .75s cubic-bezier(.2,.75,.25,1) both!important;
+  white-space:nowrap!important;
+  z-index:1!important;
+}
+.ex-ref-header .ex-logo-accent{
+  display:inline-block!important;
+  color:#c8b29d!important;
+  -webkit-text-fill-color:#c8b29d!important;
+  text-shadow:0 0 10px rgba(200,178,157,.18)!important;
+  animation:exLogoAccent 3.2s ease-in-out infinite!important;
+}
+.ex-ref-header .ex-logo-subline{
+  display:block!important;
+  margin:9px 0 0 2px!important;
+  padding:0!important;
+  font-family:Arial,Helvetica,sans-serif!important;
+  font-size:7.2px!important;
+  line-height:1!important;
+  font-weight:500!important;
+  font-style:normal!important;
+  letter-spacing:.52em!important;
+  color:rgba(255,255,255,.73)!important;
+  -webkit-text-fill-color:rgba(255,255,255,.73)!important;
+  text-shadow:none!important;
+  transform:none!important;
+  filter:none!important;
+  animation:exSubEnter .85s .10s cubic-bezier(.2,.75,.25,1) both!important;
+  white-space:nowrap!important;
+  z-index:1!important;
+}
+@keyframes exLogoEnter{
+  from{opacity:0;transform:translate3d(-12px,0,0)!important;letter-spacing:-.08em}
+  to{opacity:1;transform:none!important;letter-spacing:-.055em}
+}
+@keyframes exSubEnter{
+  from{opacity:0;transform:translate3d(0,6px,0)!important}
+  to{opacity:1;transform:none!important}
+}
+@keyframes exLogoAccent{
+  0%,100%{opacity:.92;text-shadow:0 0 8px rgba(200,178,157,.12)!important}
+  50%{opacity:1;text-shadow:0 0 16px rgba(200,178,157,.28)!important}
+}
+@media(max-width:760px){
+  .ex-ref-header .ex-logo-word{
+    font-size:28px!important;
+    line-height:.88!important;
+    letter-spacing:-.05em!important;
+  }
+  .ex-ref-header .ex-logo-subline{
+    margin-top:8px!important;
+    font-size:6.3px!important;
+    letter-spacing:.50em!important;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .ex-ref-header .ex-logo-word,
+  .ex-ref-header .ex-logo-subline,
+  .ex-ref-header .ex-logo-accent{animation:none!important}
+}

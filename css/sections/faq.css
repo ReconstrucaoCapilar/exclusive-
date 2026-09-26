@@ -1,0 +1,89 @@
+
+:root{
+  --ex-champ:#c8b79f;
+  --ex-champ-hi:#e3d6c3;
+  --ex-line:rgba(214,202,184,.20);
+  --ex-card:#0b0f13;
+  --ex-ink:#f3f1ec;
+  --ex-muted:#9b9ea3;
+}
+.contact{
+  position:relative;
+  overflow:hidden;
+  background:
+    radial-gradient(85% 110% at 82% 12%, rgba(200,183,159,.10), transparent 55%),
+    linear-gradient(180deg,#080b0f 0%,#07090d 100%) !important;
+}
+.contact::after{
+  content:"";position:absolute;inset:auto -10% 0 auto;width:55%;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(227,214,195,.45),transparent);
+  opacity:.55;pointer-events:none;
+}
+.contact .label{color:#c9cbd0!important;letter-spacing:.28em!important}
+.contact .editorial-title{color:var(--ex-ink)!important;text-shadow:0 10px 36px rgba(0,0,0,.24)}
+.contact p{color:#a7aaaf!important}
+.contact .btn{
+  background:linear-gradient(135deg,#b9a58a 0%,#d6c7b2 50%,#a99479 100%)!important;
+  color:#0a0d10!important;border:1px solid rgba(255,255,255,.14)!important;
+  box-shadow:0 14px 34px rgba(0,0,0,.28), inset 0 1px 0 rgba(255,255,255,.25)!important;
+  position:relative;overflow:hidden;
+}
+.contact .btn::before{
+  content:"";position:absolute;inset:-1px auto -1px -36%;width:28%;
+  background:linear-gradient(90deg,transparent,rgba(255,255,255,.55),transparent);
+  transform:skewX(-18deg);transition:transform .8s ease;
+}
+.contact .btn:hover::before{transform:translateX(520%) skewX(-18deg)}
+
+.mk3-faq{
+  position:relative;
+  background:
+    radial-gradient(70% 42% at 14% 6%,rgba(200,183,159,.07),transparent 62%),
+    linear-gradient(180deg,#080a0e 0%,#090b0f 58%,#07090c 100%)!important;
+  overflow:hidden;
+}
+.mk3-faq::before{
+  content:"";position:absolute;left:0;right:0;top:0;height:1px;
+  background:linear-gradient(90deg,transparent,rgba(227,214,195,.32),transparent);
+}
+.mk3-faq-head .label{color:#c9cbd0!important;letter-spacing:.30em!important}
+.mk3-faq-head .editorial-title{color:#f4f1eb!important}
+.mk3-faq-head .editorial-title span{
+  color:var(--ex-champ)!important;
+  background:linear-gradient(100deg,#a9967f 5%,#e2d4c1 45%,#b8a38a 78%,#d8cab7 100%);
+  -webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;
+  text-shadow:none!important;
+}
+.mk3-faq-list{border-top:1px solid var(--ex-line)!important}
+.mk3-faq-list details{
+  border-bottom:1px solid rgba(255,255,255,.10)!important;
+  position:relative;overflow:hidden;
+  transition:background .35s ease,border-color .35s ease;
+}
+.mk3-faq-list details::before{
+  content:"";position:absolute;left:0;top:0;bottom:0;width:2px;
+  background:linear-gradient(180deg,transparent,var(--ex-champ-hi),transparent);
+  transform:scaleY(0);transform-origin:center;transition:transform .35s ease;
+}
+.mk3-faq-list details[open]{background:linear-gradient(90deg,rgba(200,183,159,.055),transparent 52%)}
+.mk3-faq-list details[open]::before{transform:scaleY(1)}
+.mk3-faq-list summary{color:#f3f4f5!important;transition:color .28s ease,transform .28s ease}
+.mk3-faq-list summary>span:first-child{color:var(--ex-champ)!important;letter-spacing:.16em!important}
+.mk3-faq-list summary::after{color:#aaa!important;transition:transform .35s ease,color .35s ease}
+.mk3-faq-list details[open] summary::after{color:var(--ex-champ-hi)!important;transform:rotate(45deg)}
+.mk3-faq-list details[open] summary{color:#fff!important}
+.mk3-faq-answer{color:#aeb1b6!important;line-height:1.75!important}
+
+.footer{border-top:1px solid rgba(255,255,255,.10)!important;background:#07090c!important}
+.footer .tagline,.footer .location{color:#777c83!important}
+.footer .social a{color:#b7bbc0!important;transition:color .25s ease,transform .25s ease}
+.footer .social a:hover{color:var(--ex-champ-hi)!important;transform:translateY(-2px)}
+
+@media (max-width:760px){
+  .mk3-faq{padding-top:66px!important;padding-bottom:66px!important}
+  .mk3-faq-head{margin-bottom:28px!important}
+  .mk3-faq-head .editorial-title{font-size:clamp(42px,11vw,64px)!important;line-height:.98!important}
+  .mk3-faq-list summary{padding-top:26px!important;padding-bottom:26px!important}
+  .mk3-faq-list summary>span:first-child{min-width:54px!important}
+  .mk3-faq-answer{padding-left:54px!important;padding-right:22px!important;padding-bottom:26px!important}
+}

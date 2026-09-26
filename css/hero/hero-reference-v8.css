@@ -1,0 +1,367 @@
+
+/* MOBILE HERO — reconstruído por proporção a partir da referência 864×1536. */
+@media (max-width:720px){
+  :root{--ref-w:100vw;--ref-red:#d41d2a;--ref-taupe:#c9bbb5;--ref-ink:#05070a}
+  html,body,.site-shell{background:var(--ref-ink)!important}
+
+  /* A primeira dobra passa a escalar como a referência, sem depender da altura do aparelho. */
+  .hero{
+    height:143.87vw!important;
+    min-height:143.87vw!important;
+    max-height:none!important;
+    overflow:hidden!important;
+    background:var(--ref-ink)!important;
+    isolation:isolate!important;
+  }
+
+  /* Header: 106/864 da largura da referência. */
+  .header{
+    position:absolute!important;
+    inset:0 0 auto 0!important;
+    z-index:30!important;
+    width:100%!important;
+    height:12.27vw!important;
+    min-height:12.27vw!important;
+    padding:3.15vw 5.15vw 0!important;
+    display:flex!important;
+    align-items:flex-start!important;
+    justify-content:space-between!important;
+    background:#05070a!important;
+  }
+  .brand{margin:0!important;padding:0!important;transform:none!important}
+  .brand-main,.exclusive-brand-main{
+    font-family:"Inter Display",Inter,Arial,sans-serif!important;
+    font-size:5.38vw!important;
+    line-height:.87!important;
+    font-weight:800!important;
+    font-style:italic!important;
+    letter-spacing:-.062em!important;
+    color:#fff!important;
+  }
+  .brand-sub{
+    margin-top:1.55vw!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.08vw!important;
+    line-height:1!important;
+    font-weight:500!important;
+    letter-spacing:.47em!important;
+    color:rgba(255,255,255,.78)!important;
+  }
+  .nav,.header-cta,.manifesto{display:none!important}
+  .menu-toggle{
+    display:block!important;
+    width:6.2vw!important;
+    height:6.1vw!important;
+    margin:.15vw 0 0!important;
+    padding:0!important;
+    background:transparent!important;
+    border:0!important;
+  }
+  .menu-toggle span{
+    display:block!important;
+    width:6.05vw!important;
+    height:1px!important;
+    margin:1.34vw 0!important;
+    background:rgba(255,255,255,.96)!important;
+  }
+
+  /* Imagem começa imediatamente abaixo do header e permanece visível até a grade. */
+  .hero-media{
+    position:absolute!important;
+    left:0!important;right:0!important;
+    top:12.27vw!important;bottom:0!important;
+    z-index:-4!important;
+    overflow:hidden!important;
+  }
+  .hero-media img{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+    object-position:50% 44%!important;
+    transform:none!important;
+    filter:brightness(.80) saturate(.29) contrast(1.16)!important;
+    animation:exRefCamera 10s cubic-bezier(.2,.7,.2,1) both!important;
+  }
+  .hero::before{
+    content:""!important;
+    position:absolute!important;
+    inset:12.27vw 0 0!important;
+    z-index:-3!important;
+    background:
+      linear-gradient(90deg,rgba(4,6,9,.96) 0%,rgba(4,6,9,.84) 25%,rgba(4,6,9,.48) 43%,rgba(4,6,9,.15) 61%,rgba(4,6,9,.02) 100%),
+      linear-gradient(180deg,rgba(4,6,9,.04) 0%,rgba(4,6,9,0) 72%,rgba(4,6,9,.08) 82%,rgba(4,6,9,.32) 94%,rgba(4,6,9,.58) 100%)!important;
+    pointer-events:none!important;
+  }
+  .hero::after{
+    content:""!important;
+    position:absolute!important;
+    inset:12.27vw 0 0!important;
+    z-index:-2!important;
+    background:radial-gradient(circle at 74% 30%,rgba(255,255,255,.07),transparent 25%)!important;
+    pointer-events:none!important;
+  }
+
+  /* Conteúdo posicionado pela mesma malha da referência. */
+  .hero-copy{
+    position:absolute!important;
+    left:5.2vw!important;
+    top:24.65vw!important;
+    width:48.7vw!important;
+    z-index:10!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .hero-kicker-clean{
+    margin:0!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.42vw!important;
+    line-height:1!important;
+    font-weight:600!important;
+    letter-spacing:.315em!important;
+    color:rgba(255,255,255,.86)!important;
+    text-transform:uppercase!important;
+    opacity:0;
+    animation:exRefReveal .62s ease .08s forwards;
+  }
+  .hero-copy .red-rule{
+    display:block!important;
+    width:6.75vw!important;
+    height:.43vw!important;
+    margin:2.45vw 0 4.05vw!important;
+    background:var(--ref-red)!important;
+    opacity:0;
+    animation:exRefReveal .62s ease .14s forwards;
+  }
+  .hero-copy .exact-hero-title{
+    width:49vw!important;
+    margin:0!important;
+    padding:0!important;
+    font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important;
+    font-size:10.72vw!important;
+    line-height:.79!important;
+    font-weight:600!important;
+    letter-spacing:-.052em!important;
+    color:#f7f4f1!important;
+    text-shadow:0 2px 18px rgba(0,0,0,.16)!important;
+  }
+  .exact-line{
+    display:block!important;
+    opacity:0;
+    transform:translateY(2.0vw);
+    filter:blur(1.5px);
+  }
+  .exact-line-one{animation:exRefTitle .72s cubic-bezier(.2,.75,.2,1) .18s forwards}
+  .exact-line-two{
+    color:var(--ref-taupe)!important;
+    animation:exRefTitle .72s cubic-bezier(.2,.75,.2,1) .27s forwards;
+  }
+  .exact-hero-subtitle{
+    margin-top:3.0vw!important;
+    width:49vw!important;
+    font-family:"Cormorant Garamond",Georgia,"Times New Roman",serif!important;
+    font-size:5.12vw!important;
+    line-height:1!important;
+    font-weight:600!important;
+    letter-spacing:-.032em!important;
+    color:#f7f5f2!important;
+    white-space:nowrap!important;
+    opacity:0;
+    animation:exRefReveal .7s ease .36s forwards;
+  }
+  .hero-copy p{
+    width:36.2vw!important;
+    margin:5.45vw 0 0!important;
+    padding:0!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:2.02vw!important;
+    line-height:1.56!important;
+    font-weight:400!important;
+    letter-spacing:-.01em!important;
+    color:rgba(244,242,239,.69)!important;
+    opacity:0;
+    animation:exRefReveal .72s ease .44s forwards;
+  }
+  .hero-copy p br{display:none!important}
+  .hero-copy .btn{
+    width:45.75vw!important;
+    min-width:45.75vw!important;
+    height:10.45vw!important;
+    min-height:10.45vw!important;
+    margin:5.45vw 0 0!important;
+    padding:0 3.75vw!important;
+    display:flex!important;
+    align-items:center!important;
+    justify-content:space-between!important;
+    gap:2vw!important;
+    border:1px solid rgba(255,91,101,.40)!important;
+    border-radius:0!important;
+    background:linear-gradient(110deg,#b9141f 0%,#d91f29 60%,#ec2832 100%)!important;
+    box-shadow:0 1.8vw 5vw rgba(113,5,15,.24),inset 0 1px rgba(255,255,255,.13)!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.34vw!important;
+    line-height:1!important;
+    font-weight:700!important;
+    letter-spacing:.23em!important;
+    text-transform:uppercase!important;
+    color:#fff!important;
+    opacity:0;
+    animation:exRefReveal .72s ease .52s forwards;
+    overflow:hidden!important;
+  }
+  .hero-copy .btn::before{
+    content:""!important;
+    position:absolute!important;
+    top:-50%!important;bottom:-50%!important;
+    left:-35%!important;width:18%!important;
+    background:linear-gradient(90deg,transparent,rgba(255,255,255,.22),transparent)!important;
+    transform:skewX(-16deg)!important;
+    animation:exRefSheen 5.8s ease-in-out 1.7s infinite!important;
+  }
+  .hero-copy .btn .arrow{font-size:3.0vw!important;line-height:1!important;font-weight:300!important}
+  .hero-side{display:none!important}
+
+  /* Assinatura inferior do hero. */
+  .hero-car{
+    position:absolute!important;
+    left:5.25vw!important;
+    right:auto!important;
+    bottom:4.55vw!important;
+    width:89.5vw!important;
+    z-index:10!important;
+    text-align:left!important;
+    opacity:1!important;
+    transform:none!important;
+  }
+  .hero-car strong{
+    display:block!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.38vw!important;
+    line-height:1!important;
+    font-weight:600!important;
+    letter-spacing:.31em!important;
+    text-transform:uppercase!important;
+    color:rgba(255,255,255,.90)!important;
+  }
+  .hero-car span{
+    display:block!important;
+    margin-top:2.65vw!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.02vw!important;
+    line-height:1!important;
+    font-weight:500!important;
+    letter-spacing:.30em!important;
+    text-transform:uppercase!important;
+    color:rgba(255,255,255,.56)!important;
+    white-space:nowrap!important;
+  }
+  .hero-car span::before{
+    content:""!important;
+    display:inline-block!important;
+    width:6.15vw!important;
+    height:1px!important;
+    margin:0 3.2vw .28vw 0!important;
+    background:rgba(255,255,255,.78)!important;
+    vertical-align:middle!important;
+  }
+
+  /* Dois painéis exatamente depois da primeira dobra. */
+  .mosaic.mobile-only{
+    height:34.03vw!important;
+    min-height:34.03vw!important;
+    display:grid!important;
+    grid-template-columns:55.3% 44.7%!important;
+    grid-template-rows:34.03vw!important;
+    gap:1px!important;
+    margin:0!important;
+    padding:0!important;
+    background:#1f2226!important;
+    border:0!important;
+    overflow:hidden!important;
+  }
+  .mosaic.mobile-only .tile{
+    position:relative!important;
+    min-height:34.03vw!important;
+    height:34.03vw!important;
+    margin:0!important;
+    padding:0!important;
+    border:0!important;
+    overflow:hidden!important;
+    background:#07090c!important;
+  }
+  .mosaic.mobile-only .tile-mobile-wheel{display:block!important;grid-column:1!important;grid-row:1!important}
+  .mosaic.mobile-only .tile-mobile-interior{display:block!important;grid-column:2!important;grid-row:1!important}
+  .mosaic.mobile-only .tile-mobile-red,.mosaic.mobile-only .tile-mobile-dark{display:none!important}
+  .mosaic.mobile-only .tile img{
+    position:absolute!important;
+    inset:0!important;
+    width:100%!important;
+    height:100%!important;
+    max-width:none!important;
+    object-fit:cover!important;
+    transform:none!important;
+    filter:brightness(.88) saturate(.83) contrast(1.08)!important;
+  }
+  .mosaic.mobile-only .tile-mobile-wheel img{object-position:46% 52%!important}
+  .mosaic.mobile-only .tile-mobile-interior img{object-position:52% 49%!important}
+  .mosaic.mobile-only .tile::after{
+    content:""!important;
+    position:absolute!important;
+    inset:0!important;
+    z-index:1!important;
+    background:linear-gradient(0deg,rgba(3,5,8,.73),transparent 59%)!important;
+  }
+  .mosaic.mobile-only .tile-copy{
+    position:absolute!important;
+    left:5.15vw!important;
+    right:3vw!important;
+    bottom:2.8vw!important;
+    z-index:3!important;
+    margin:0!important;
+    padding:0!important;
+  }
+  .mosaic.mobile-only .tile-mobile-interior .tile-copy{left:4.2vw!important}
+  .mosaic.mobile-only .tile-copy .label{font-size:0!important;line-height:1!important;margin:0!important}
+  .mosaic.mobile-only .tile-mobile-wheel .tile-copy .label::after{
+    content:"DETALHES"!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.34vw!important;
+    line-height:1!important;
+    font-weight:500!important;
+    letter-spacing:.27em!important;
+    color:#fff!important;
+  }
+  .mosaic.mobile-only .tile-mobile-interior .tile-copy .label::after{
+    content:"INTERIORES\A TAMBÉM"!important;
+    white-space:pre!important;
+    font-family:Inter,Arial,sans-serif!important;
+    font-size:1.34vw!important;
+    line-height:1.42!important;
+    font-weight:500!important;
+    letter-spacing:.25em!important;
+    color:#fff!important;
+  }
+  .mosaic.mobile-only .tile-copy .red-rule,.mosaic.mobile-only .tile-copy p{display:none!important}
+  .mosaic.mobile-only .tile-mobile-wheel::before,.mosaic.mobile-only .tile-mobile-interior::before{
+    content:"→"!important;
+    position:absolute!important;
+    z-index:4!important;
+    right:3.0vw!important;
+    bottom:2.45vw!important;
+    font-family:Arial,sans-serif!important;
+    font-size:3.0vw!important;
+    line-height:1!important;
+    font-weight:300!important;
+    color:#fff!important;
+  }
+}
+
+@keyframes exRefReveal{from{opacity:0;transform:translateY(1.4vw)}to{opacity:1;transform:none}}
+@keyframes exRefTitle{from{opacity:0;transform:translateY(2vw);filter:blur(1.5px)}to{opacity:1;transform:none;filter:none}}
+@keyframes exRefCamera{from{transform:scale(1.018)}to{transform:scale(1)}}
+@keyframes exRefSheen{0%,64%{left:-35%}84%,100%{left:130%}}
+@media(prefers-reduced-motion:reduce){
+  .hero-media img,.hero-kicker-clean,.hero-copy .red-rule,.exact-line,.exact-hero-subtitle,.hero-copy p,.hero-copy .btn{animation:none!important;opacity:1!important;transform:none!important;filter:none!important}
+}

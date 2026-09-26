@@ -1,0 +1,154 @@
+
+/* ===== Exclusive | Serviços v10 ===== */
+#servicos.services{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(70% 90% at 105% 8%, rgba(190,169,148,.10), transparent 55%),
+    radial-gradient(55% 70% at -8% 100%, rgba(255,255,255,.035), transparent 62%),
+    linear-gradient(180deg,#05070a 0%,#080b10 52%,#05070a 100%) !important;
+  border-top:1px solid rgba(255,255,255,.065);
+  border-bottom:1px solid rgba(255,255,255,.065);
+}
+#servicos.services::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  z-index:-1;
+  opacity:.7;
+  background:linear-gradient(115deg,transparent 0 42%,rgba(255,255,255,.018) 50%,transparent 58% 100%);
+}
+#servicos .label{
+  color:#ece8e3 !important;
+  text-shadow:0 0 24px rgba(255,255,255,.08);
+}
+#servicos .editorial-title{
+  color:#f8f7f4 !important;
+  text-shadow:0 10px 40px rgba(0,0,0,.5);
+}
+#servicos .services-title-accent{
+  color:#cbb8a6 !important;
+  background:linear-gradient(110deg,#9f8975 0%,#f1e5d7 45%,#bda48e 72%,#eee4d9 100%) !important;
+  background-size:180% 100% !important;
+  background-clip:text !important;
+  -webkit-background-clip:text !important;
+  -webkit-text-fill-color:transparent !important;
+  filter:drop-shadow(0 6px 22px rgba(188,164,141,.14));
+}
+#servicos .section-note{
+  color:#c9c4bd !important;
+}
+#servicos .section-note::before{
+  background:linear-gradient(90deg,rgba(241,229,215,.9),rgba(175,153,132,.34)) !important;
+  box-shadow:0 0 16px rgba(207,186,164,.14);
+}
+#servicos .service:nth-child(n){
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.015) 38%,rgba(4,7,11,.84) 100%) !important;
+  border:1px solid rgba(255,255,255,.115) !important;
+  border-left:1px solid rgba(255,255,255,.115) !important;
+  box-shadow:
+    0 20px 55px rgba(0,0,0,.28),
+    inset 0 1px 0 rgba(255,255,255,.055),
+    inset 0 -1px 0 rgba(255,255,255,.018) !important;
+  transition:transform .5s cubic-bezier(.22,.8,.2,1),border-color .45s ease,box-shadow .45s ease,background .45s ease;
+}
+#servicos .service::before{
+  content:"" !important;
+  position:absolute !important;
+  left:22px !important;
+  top:0 !important;
+  width:42px !important;
+  height:2px !important;
+  background:linear-gradient(90deg,#f0e5d9,#aa917a) !important;
+  box-shadow:0 0 18px rgba(209,183,158,.18) !important;
+}
+#servicos .service::after{
+  content:"";
+  position:absolute;
+  inset:-40% -70%;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(112deg,transparent 42%,rgba(235,223,210,.07) 50%,transparent 58%);
+  transform:translateX(-62%);
+}
+#servicos .service-icon{
+  background:linear-gradient(145deg,rgba(255,255,255,.065),rgba(255,255,255,.018)) !important;
+  border-color:rgba(255,255,255,.12) !important;
+  box-shadow:0 16px 34px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.07) !important;
+}
+#servicos .service-icon::before{
+  background:radial-gradient(circle at 35% 28%,rgba(213,190,168,.14),transparent 58%) !important;
+}
+#servicos .service svg{
+  stroke:#d7c3b0 !important;
+  filter:drop-shadow(0 4px 12px rgba(203,178,154,.13)) !important;
+}
+#servicos .service h3{
+  color:#fff !important;
+  text-shadow:0 2px 14px rgba(0,0,0,.34);
+}
+#servicos .service p{
+  color:#c5c7cc !important;
+}
+#servicos .service:hover{
+  transform:translateY(-7px) !important;
+  border-color:rgba(218,197,177,.38) !important;
+  border-left-color:rgba(218,197,177,.38) !important;
+  box-shadow:0 26px 65px rgba(0,0,0,.42),inset 0 1px 0 rgba(255,255,255,.09) !important;
+}
+#servicos .service:hover svg{stroke:#f1e5d7 !important;}
+
+/* entrada cinematográfica */
+#servicos .section-head > div:first-child,
+#servicos .section-note,
+#servicos .service{
+  opacity:0;
+  transform:translateY(26px);
+}
+#servicos.services-v10-in .section-head > div:first-child{
+  animation:svcHeadIn .9s cubic-bezier(.2,.75,.25,1) .05s forwards;
+}
+#servicos.services-v10-in .services-title-accent{
+  animation:svcMetal 2.2s ease .45s both;
+}
+#servicos.services-v10-in .section-note{
+  animation:svcHeadIn .8s cubic-bezier(.2,.75,.25,1) .22s forwards;
+}
+#servicos.services-v10-in .service{
+  animation:svcCardIn .9s cubic-bezier(.2,.8,.2,1) forwards;
+}
+#servicos.services-v10-in .service:nth-child(1){animation-delay:.12s}
+#servicos.services-v10-in .service:nth-child(2){animation-delay:.22s}
+#servicos.services-v10-in .service:nth-child(3){animation-delay:.32s}
+#servicos.services-v10-in .service:nth-child(4){animation-delay:.42s}
+#servicos.services-v10-in .service:nth-child(5){animation-delay:.52s}
+#servicos.services-v10-in .service:nth-child(6){animation-delay:.62s}
+#servicos.services-v10-in .service::after{animation:svcSweep 1.55s ease .5s both}
+#servicos.services-v10-in .service-icon{animation:svcIconIn 1s cubic-bezier(.2,.8,.2,1) both}
+#servicos.services-v10-in .service:nth-child(1) .service-icon{animation-delay:.25s}
+#servicos.services-v10-in .service:nth-child(2) .service-icon{animation-delay:.35s}
+#servicos.services-v10-in .service:nth-child(3) .service-icon{animation-delay:.45s}
+#servicos.services-v10-in .service:nth-child(4) .service-icon{animation-delay:.55s}
+#servicos.services-v10-in .service:nth-child(5) .service-icon{animation-delay:.65s}
+#servicos.services-v10-in .service:nth-child(6) .service-icon{animation-delay:.75s}
+@keyframes svcHeadIn{to{opacity:1;transform:translateY(0)}}
+@keyframes svcCardIn{0%{opacity:0;transform:translateY(34px) scale(.985)}100%{opacity:1;transform:translateY(0) scale(1)}}
+@keyframes svcIconIn{0%{opacity:0;transform:translateY(10px) scale(.86)}70%{opacity:1;transform:translateY(-3px) scale(1.05)}100%{opacity:1;transform:none}}
+@keyframes svcSweep{0%{transform:translateX(-62%)}100%{transform:translateX(62%)}}
+@keyframes svcMetal{0%{background-position:0% 50%}100%{background-position:100% 50%}}
+@media(max-width:720px){
+  #servicos.services{padding-top:50px !important;padding-bottom:58px !important;}
+  #servicos .editorial-title{line-height:1.01 !important;}
+  #servicos .service:nth-child(n){min-height:212px !important;}
+  #servicos .service p{color:#c8cbd0 !important;}
+}
+@media(prefers-reduced-motion:reduce){
+  #servicos .section-head > div:first-child,#servicos .section-note,#servicos .service{opacity:1!important;transform:none!important;animation:none!important}
+  #servicos .services-title-accent,#servicos .service-icon,#servicos .service::after{animation:none!important}
+}

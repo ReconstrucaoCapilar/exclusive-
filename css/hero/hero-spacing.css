@@ -1,0 +1,109 @@
+
+/* Exclusive — hero com mais respiro e transição cinematográfica */
+.hero{height:760px}
+.hero .hero-copy{top:190px}
+.hero .hero-copy p{margin-top:25px;margin-bottom:38px}
+.hero::after{
+  content:"";
+  position:absolute;
+  left:0;right:0;bottom:0;
+  height:150px;
+  z-index:-1;
+  pointer-events:none;
+  background:linear-gradient(180deg,transparent 0%,rgba(7,9,13,.12) 28%,rgba(7,9,13,.78) 82%,#090c10 100%);
+}
+.mosaic{position:relative}
+.mosaic::before{
+  content:"";
+  position:absolute;
+  left:0;right:0;top:0;
+  height:72px;
+  z-index:3;
+  pointer-events:none;
+  background:linear-gradient(180deg,#090c10 0%,rgba(9,12,16,.52) 42%,transparent 100%);
+}
+
+@media(max-width:720px){
+  .hero{
+    height:610px;
+    min-height:610px;
+    max-height:none;
+  }
+  .hero .header{
+    height:88px;
+    padding:22px 22px 0;
+  }
+  .hero .hero-copy{
+    left:4.7%;
+    top:126px;
+    width:57%;
+  }
+  .hero .hero-copy .hero-kicker-clean{
+    margin-bottom:0;
+    line-height:1.55;
+  }
+  .hero .hero-copy .red-rule{
+    margin-top:13px;
+    margin-bottom:0;
+    width:30px;
+  }
+  .hero .hero-copy h1{
+    margin-top:18px;
+    margin-bottom:0;
+    font-size:clamp(39px,10vw,52px);
+    line-height:.94;
+  }
+  .hero .hero-small-line{
+    margin-top:8px;
+    font-size:.57em;
+    line-height:1.18;
+  }
+  .hero .hero-copy p{
+    width:100%;
+    max-width:285px;
+    margin:28px 0 31px;
+    font-size:clamp(10.5px,2.65vw,13px);
+    line-height:1.65;
+    color:rgba(255,255,255,.72);
+  }
+  .hero .hero-copy .btn{
+    min-height:52px;
+    padding:0 20px;
+    gap:20px;
+    font-size:8.5px;
+  }
+  .hero .hero-car{
+    right:4.5%;
+    bottom:32px;
+    max-width:48%;
+  }
+  .hero::after{
+    z-index:0;
+    height:145px;
+    background:linear-gradient(180deg,transparent 0%,rgba(7,9,13,.08) 28%,rgba(7,9,13,.72) 78%,#090c10 100%);
+  }
+  .hero .header,.hero .hero-copy,.hero .hero-car{z-index:4}
+  .mosaic::before{
+    height:58px;
+    background:linear-gradient(180deg,#090c10 0%,rgba(9,12,16,.50) 46%,transparent 100%);
+  }
+}
+
+@media(max-width:390px){
+  .hero{
+    height:590px;
+    min-height:590px;
+  }
+  .hero .hero-copy{
+    top:120px;
+    width:59%;
+  }
+  .hero .hero-copy h1{
+    font-size:clamp(37px,10.4vw,46px);
+  }
+  .hero .hero-copy p{
+    margin-top:24px;
+    margin-bottom:28px;
+    font-size:10.5px;
+  }
+}
