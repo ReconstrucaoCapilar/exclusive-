@@ -52,6 +52,45 @@
 
 <link rel="stylesheet" id="hero-cta-champagne-v17" href="css/hero/cta-hero.css">
 
+
+<style id="desktop-width-fix">
+/* Correção SOMENTE para desktop.
+   Mobile permanece exatamente como está. */
+@media (min-width: 1024px) {
+  html,
+  body {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    background: #07090d;
+    overflow-x: clip;
+  }
+
+  .site-shell {
+    width: 100%;
+    max-width: none !important;
+    min-width: 0;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    overflow: visible !important;
+  }
+
+  .ex-ref-hero,
+  .ex-ref-header,
+  .hero-mosaic,
+  main,
+  section,
+  footer {
+    max-width: none;
+  }
+
+  .ex-ref-hero {
+    width: 100%;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="site-shell">
